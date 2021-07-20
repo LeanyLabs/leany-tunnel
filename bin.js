@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-require('./dist/index');
+const { startTunnel }  = require('./dist/index');
+
+startTunnel();
