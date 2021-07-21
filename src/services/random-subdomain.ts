@@ -2,7 +2,7 @@ enum Names {
   'vova',
   'marik',
   'duck',
-  'vanya',
+  'vania',
   'mykola',
   'rick',
   'morthy',
@@ -19,14 +19,14 @@ enum Adjactives {
   'hungry',
   'happy',
   'fierce',
-  'odacious',
+  'bodacious',
   'mad',
   'attractive',
 }
 
-const NAMES_COUNT = 10;
-const ADJACTIVES_COUNT = 10;
-const FIGURES_COUNT = 10;
+const NAMES_COUNT: number = Object.keys(Names).length / 2;
+const ADJACTIVES_COUNT: number = Object.keys(Adjactives).length / 2;
+const FIGURES_COUNT: number = 10;
 
 export const getRandomSubdomain = () => {
   return `${Adjactives[Math.floor(Math.random() * ADJACTIVES_COUNT)]}-${
