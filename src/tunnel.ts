@@ -13,7 +13,7 @@ export async function createTunnel(port: number, onClose: Function): Promise<Fun
   let receivedRequestedSubdomain = false;
 
   while (triesCount < MAX_TRIES) {
-    tunnel = await localtunnel({ port: port || 8080, subdomain: TUNNEL_SUBDOMAIN });
+    tunnel = await localtunnel({ port, subdomain: TUNNEL_SUBDOMAIN });
 
     receivedRequestedSubdomain = tunnel.url.includes(TUNNEL_SUBDOMAIN);
     if (receivedRequestedSubdomain) {
