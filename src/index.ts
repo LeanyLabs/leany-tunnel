@@ -3,11 +3,11 @@ import { logger } from '@leanylabs/logger';
 import { createTunnel } from './tunnel';
 
 export async function startTunnel() {
-  if (!TUNNEL_SUBDOMAIN) {
+  if (!process.env.TUNNEL_SUBDOMAIN) {
     logger.warn('TUNNEL_SUBDOMAIN is missed, using a random subdomain');
   }
 
-  if (!PORT) {
+  if (!process.env.PORT) {
     logger.warn('PORT is missed, using default 8080 port');
   }
 
