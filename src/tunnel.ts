@@ -1,6 +1,6 @@
 import { promisify } from 'util';
 import localtunnel from 'localtunnel';
-import logger from './logger';
+import { logger } from '@leanylabs/logger';
 import { TUNNEL_SUBDOMAIN } from './config';
 
 const pause = promisify(setTimeout);
