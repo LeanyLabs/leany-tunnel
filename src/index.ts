@@ -4,11 +4,11 @@ import { createTunnel } from './tunnel';
 
 export async function startTunnel() {
   if (!TUNNEL_SUBDOMAIN) {
-    logger.warn('Require enviroment variable TUNNEL_SUBDOMAIN');
+    logger.warn('TUNNEL_SUBDOMAIN is missed, using a random subdomain');
   }
 
   if (!PORT) {
-    logger.warn('Require enviroment variable PORT');
+    logger.warn('PORT is missed, using default 8080 port');
   }
 
   try {
