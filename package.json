@@ -21,9 +21,7 @@
   "dependencies": {
     "@leanylabs/logger": "0.0.5",
     "dotenv": "^10.0.0",
-    "localtunnel": "git+https://github.com/LeanyLabs/localtunnel.git",
-    "winston": "^3.3.3",
-    "winston-console-format": "^1.0.8"
+    "localtunnel": "git+https://github.com/LeanyLabs/localtunnel.git"
   },
   "devDependencies": {
     "@types/node": "^15.14.2",
