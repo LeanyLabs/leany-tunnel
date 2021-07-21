@@ -28,7 +28,7 @@ npm install -g @leanylabs/leany-tunnel
 
 ## CLI usage
 
-When localtunnel is installed either globally or as a dependency in your project, just use the `llt` command to start the tunnel.
+When leany-tunnel is installed either globally or as a dependency in your project, just use the `llt` command to start the tunnel.
 
 ```
 llt
