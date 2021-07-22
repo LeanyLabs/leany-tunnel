@@ -1,13 +1,12 @@
 import { promisify } from 'util';
 import localtunnel from 'localtunnel';
 import { logger } from '@leanylabs/logger';
-import { TUNNEL_SUBDOMAIN } from './config';
 
 const pause = promisify(setTimeout);
 
 const MAX_TRIES = 5;
 
-export async function createTunnel(port: number, onClose: Function): Promise<Function> {
+export async function createTunnel(port: number, TUNNEL_SUBDOMAIN, onClose: Function): Promise<Function> {
   let triesCount = 0;
   let tunnel: localtunnel.Tunnel;
   let receivedRequestedSubdomain = false;

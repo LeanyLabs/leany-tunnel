@@ -1,11 +1,13 @@
-import { PORT, TUNNEL_SUBDOMAIN } from './config';
+import { config } from './config';
 import { logger } from '@leanylabs/logger';
 import { createTunnel } from './tunnel';
 
-export async function startTunnel() {
+async function startTunnel() {
+  const TUNNEL_SUBDOMAIN = config.getSubdomain();
+  const PORT = config.getPort();
   try {
     logger.info('Creating tunnel', { TUNNEL_SUBDOMAIN, PORT });
-    const closeTunnel = await createTunnel(Number.parseInt(PORT), () => {
+    const closeTunnel = await createTunnel(Number.parseInt(PORT), TUNNEL_SUBDOMAIN, () => {
       process.exit();
     });
     process.on('beforeExit', () => closeTunnel());
@@ -13,3 +15,5 @@ export async function startTunnel() {
     logger.error('Failed to start tunnel', { err });
   }
 }
+
+startTunnel();
