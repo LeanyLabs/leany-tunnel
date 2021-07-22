@@ -1,6 +1,6 @@
 {
   "name": "@leanylabs/leany-tunnel",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "",
   "types": "lib",
   "main": "dist/index.js",
@@ -21,7 +21,8 @@
   "dependencies": {
     "@leanylabs/logger": "0.0.5",
     "dotenv": "^10.0.0",
-    "localtunnel": "git+https://github.com/LeanyLabs/localtunnel.git"
+    "localtunnel": "git+https://github.com/LeanyLabs/localtunnel.git",
+    "yargs": "^17.0.1"
   },
   "devDependencies": {
     "@types/node": "^15.14.2",
