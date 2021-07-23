@@ -1,6 +1,6 @@
 {
   "name": "@leanylabs/leany-tunnel",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "",
   "types": "lib",
   "main": "dist/index.js",
